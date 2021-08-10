@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 from datetime import time
 from bs4 import BeautifulSoup
 import execjs

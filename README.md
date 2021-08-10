@@ -11,3 +11,4 @@ GitHub action可参考[Lihewin](https://github.com/Lihewin/NUIST_Auto_Health_Rep
 在Account.txt文件中依次添加教务网站用户名、密码、邮箱服务器地址、邮箱账号、邮箱授权码、接收邮箱账号<br/>
 格式为各占一行<br/>
 运行run.py<br/>
+

@@ -6,14 +6,25 @@ from email.mime.text import MIMEText
 from email.header import Header
 
 
-def sendmail(content: str):
-    # 第三方 SMTP 服务
-    mail_host = "smtp.qq.com"  # 设置服务器
-    mail_user = "1258975239@qq.com"  # 用户名
-    mail_pass = "lvqqutdgexxgjhji"  # 口令
+def sendmail(content):
+    # 获取邮箱相关信息
+    try:
+        with open('./Account.txt', 'r') as f:
+            # 第三方 SMTP 服务
+            lines = f.readlines()
+            mail_host = lines[2].replace("\n", "").replace("\r", "").replace(" ", "")  # 设置服务器
+            mail_user = lines[3].replace("\n", "").replace("\r", "").replace(" ", "")  # 用户名
+            mail_pass = lines[4].replace("\n", "").replace("\r", "").replace(" ", "")  # 口令
+            mail_recv = lines[5].replace("\n", "").replace("\r", "").replace(" ", "")  # 口令
+            print("发送邮件使用的邮箱为:", mail_user)
+    except FileNotFoundError as e:
+        print("没有找到Account.txt文件，请查看该文件！")
+        exit(0)
 
-    sender = '1258975239@qq.com'
-    receivers = ['978364075@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    sender = mail_user
+    receivers = list()  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    receivers.append(mail_recv)
+    print(receivers)
 
     # content = '填写成功'
     subject = '健康日报填写自动化'
@@ -32,3 +43,7 @@ def sendmail(content: str):
         print("邮件发送成功")
     except smtplib.SMTPException:
         print("Error: 无法发送邮件")
+
+
+if __name__ == "__main__":
+    sendmail('测试')

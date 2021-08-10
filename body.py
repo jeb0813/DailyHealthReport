@@ -97,3 +97,7 @@ def start():
         print('打卡失败，' + r3.text)
         mailSending.sendmail('填写失败\n' + r3.text)
         # r4 = s.get("https://sctapi.ftqq.com/xxxxx.send?title=自动健康日报成失败！&desp="+r3.text)
+
+
+if __name__ == "__main__":
+    start()

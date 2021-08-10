@@ -2,8 +2,8 @@
 在[Lihewin](https://github.com/Lihewin/NUIST_Auto_Health_Report)
 的项目上进行了修改<br/>
 添加了邮件发送模块用于确认填报状态<br/>
-取消了GitHub中的自动运行，添加了程序内自动运行，用于在服务器中运行<br/>
-GitHub action可参考[Lihewin](https://github.com/Lihewin/NUIST_Auto_Health_Report)
+添加了程序内定时运行<br/>
+GitHub Actions可参考[Lihewin](https://github.com/Lihewin/NUIST_Auto_Health_Report)
 的项目<br/>
 
 

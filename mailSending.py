@@ -24,7 +24,6 @@ def sendmail(content):
     sender = mail_user
     receivers = list()  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
     receivers.append(mail_recv)
-    print(receivers)
 
     # content = '填写成功'
     subject = '健康日报填写自动化'
